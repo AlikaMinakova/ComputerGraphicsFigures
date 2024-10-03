@@ -33,7 +33,7 @@ public class RasterizationController {
     }
 
     private void handlePrimaryClick(GraphicsContext graphicsContext, MouseEvent event) {
-        int size = 200;
+        int size = 500;
         Rasterization.drawSector(canvas.getGraphicsContext2D(),
                 (int)event.getX() - size / 2, (int)event.getY() - size / 2, size, size,
                 Color.rgb(31, 88, 204), Color.rgb(31, 204, 132));
