@@ -23,20 +23,14 @@ public class RasterizationController {
         anchorPane.prefWidthProperty().addListener((ov, oldValue, newValue) -> canvas.setWidth(newValue.doubleValue()));
         anchorPane.prefHeightProperty().addListener((ov, oldValue, newValue) -> canvas.setHeight(newValue.doubleValue()));
 
-        //Rasterization.sector(canvas.getGraphicsContext2D(), 100, 100, 200, 200, Color.CHOCOLATE);
-
-        canvas.setOnMouseClicked(event -> {
-            switch (event.getButton()) {
-                case PRIMARY -> handlePrimaryClick(canvas.getGraphicsContext2D(), event);
-            }
-        });
-    }
-
-    private void handlePrimaryClick(GraphicsContext graphicsContext, MouseEvent event) {
-        int size = 500;
         Rasterization.drawSector(canvas.getGraphicsContext2D(),
-                (int)event.getX() - size / 2, (int)event.getY() - size / 2, size, size,
-                Color.rgb(31, 88, 204), Color.rgb(31, 204, 132));
-    }
+                400,  300, 200,
+                Color.rgb(31, 88, 204), Color.rgb(31, 204, 132), 90, 270);
 
+//        canvas.setOnMouseClicked(event -> {
+//            switch (event.getButton()) {
+//                case PRIMARY -> handlePrimaryClick(canvas.getGraphicsContext2D(), event);
+//            }
+//        });
+    }
 }
